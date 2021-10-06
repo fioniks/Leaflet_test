@@ -43,7 +43,7 @@
 			if (feature.properties && feature.properties.popupContent) {
 				popupContent += feature.properties.popupContent;
 			}
-				layer.bindPopup(popupContent);
+				layer.bindPopup(popupContent , { maxWidth: "auto"});
 	};
 	
 	var bbTeam = L.geoJSON(null, {
