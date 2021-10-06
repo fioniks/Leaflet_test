@@ -37,7 +37,9 @@
 	
 			var popupContent = "<p><b>" +
 					feature.properties.CODE_ICAO + " - " +
-					feature.properties.TXT_NAME_D + "</b></p>" ;
+					feature.properties.TXT_NAME_D + "</b>" + 
+			                feature.properties.CHART_LIST + 
+			                "</p>" ;
 					
 							
 			if (feature.properties && feature.properties.popupContent) {
@@ -54,7 +56,7 @@
 	  });
 
   // load GeoJSON from an external file
-  //$.getJSON("/data/AFIS_UNIT.json",function(data){
+  //$.getJSON("/data/AFIS_UNIT_modified.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
     //L.geoJson(data).addTo(map);
   //});
