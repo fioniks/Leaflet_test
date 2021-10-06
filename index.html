@@ -39,9 +39,12 @@
 					feature.properties.CODE_ICAO + " - " +
 					feature.properties.TXT_NAME_D + "</b>" ;
 		        if (feature.properties.CHART_LIST) {
+				var arbopath = "./data/pdf/" + feature.properties.CODE_ICAO + "/"
+				var pdfPath = ""
 				var pdfs = feature.properties.CHART_LIST.split(';')
 				for (var i = 0; i < pdfs.length; i++){
-					popupContent += "<p>" + pdfs[i] + "</p>"
+					pdfPath = arbopath + pdfs[i] + ".pdf"
+					popupContent += "<a href=" + pdfPath + ">" + pdfs[i] + "</a>"
 				}
 			}
 					
