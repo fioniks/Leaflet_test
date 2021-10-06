@@ -35,11 +35,15 @@
 	
 	function forEachFeature(feature, layer) {
 	
-			var popupContent = "<p><b>" +
+			var popupContent = "<b>" +
 					feature.properties.CODE_ICAO + " - " +
-					feature.properties.TXT_NAME_D + "</b>" + 
-			                feature.properties.CHART_LIST + 
-			                "</p>" ;
+					feature.properties.TXT_NAME_D + "</b>" ;
+		        if (feature.properties.CHART_LIST) {
+				var pdfs = feature.properties.CHART_LIST.split(';')
+				for (var i = 0; i < pdfs.length; i++){
+					popupContent += "<p>" + pdfs[i] + "</p>"
+				}
+			}
 					
 							
 			if (feature.properties && feature.properties.popupContent) {
