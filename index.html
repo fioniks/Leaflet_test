@@ -36,8 +36,8 @@
 	function forEachFeature(feature, layer) {
 	
 			var popupContent = "<p><b>" +
-					feature.properties.CODE_ICAO + "</b>/</br>" +
-					feature.properties.TXT_NAME_D + "</br>" +
+					feature.properties.CODE_ICAO + " - </br>" +
+					feature.properties.TXT_NAME_D + "</b></br>" +
 					"</p>" ;
 							
 			if (feature.properties && feature.properties.popupContent) {
