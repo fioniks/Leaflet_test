@@ -44,9 +44,10 @@
 				var pdfs = feature.properties.CHART_LIST.split(';')
 				for (var i = 0; i < pdfs.length; i++){
 					pdfPath = arbopath + pdfs[i] + ".pdf"
+					pdfPath = '"' + pdfPath + '"'
 					console.log("pdfPath: " + pdfPath)
 					//popupContent += "<a href=" + pdfPath + ">" + pdfs[i] + "</a>"
-					console.log ("popupContent :" +  pdfPath + "-" + pdfs[i])
+					console.log ("popupContent :" +  pdfPath )
 				}
 			}
 					
