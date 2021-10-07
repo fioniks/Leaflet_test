@@ -26,7 +26,7 @@
     }).addTo(map);
 	
 	var  geojsonMarkerOptions = {
-        'radius':6,
+        'radius':10,
 		'opacity': .5,
 		'color': "red",
 		'fillColor':  "blue",
@@ -44,9 +44,9 @@
 				var pdfs = feature.properties.CHART_LIST.split(';')
 				for (var i = 0; i < pdfs.length; i++){
 					pdfPath = arbopath + pdfs[i] + ".pdf"
-					 console.log("pdfPath: " + pdfPath)
+					console.log("pdfPath: " + pdfPath)
 					//popupContent += "<a href=" + pdfPath + ">" + pdfs[i] + "</a>"
-					//console.log ("popupContent :" + "<a href=" + pdfPath + ">" + pdfs[i] + "</a>")
+					console.log ("popupContent :" +  pdfPath + "-" + pdfs[i])
 				}
 			}
 					
