@@ -48,7 +48,7 @@
 					pdfPath = arbopath + pdfs[i] + ".pdf"
 					pdfPath = '"' + pdfPath + '"'
 					console.log("pdfPath: " + pdfPath)
-					popupContent += "</br><a href=" + pdfPath + ">" + pdfs[i] + "</a></br>"
+					popupContent += "</br><a href=" + pdfPath  +" target=\"_blank\" + ">" + pdfs[i] + "</a></br>"
 					console.log ("popupContent :" +  pdfPath )
 				}
 			}
