@@ -70,13 +70,14 @@
 			}
 		        if (feature.properties.CHART_LIST) {
 				var arbopath = "./data/pdf/" + feature.properties.CODE_ICAO + "/"
+				var zipFile = "./data/zip/" + feature.properties.CODE_ICAO + "/" + feature.properties.CODE_ICAO + ".zip"
 				var pdfPath = ""
 				var pdfs = feature.properties.CHART_LIST.split(';')
 				for (var i = 0; i < pdfs.length; i++){
 					pdfPath = arbopath + pdfs[i] + ".pdf"
 					pdfPath = '"' + pdfPath + '"'
 					console.log("pdfPath: " + pdfPath)
-					popupContent += "</br><a href=" + pdfPath + ">" + pdfs[i] + "</a></br>"
+					popupContent += "</br><a href=" + pdfPath + " download>" + pdfs[i] + "</a></br>"
 					// console.log ("popupContent :" +   "</br><a href=" + pdfPath  +" target=\"_blank\" + ">" + pdfs[i] + "</a></br>" )
 				}
 			}
