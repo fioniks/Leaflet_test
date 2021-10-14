@@ -71,6 +71,8 @@
 		        if (feature.properties.CHART_LIST) {
 				var arbopath = "./data/pdf/" + feature.properties.CODE_ICAO + "/"
 				var zipFile = "./data/zip/" + feature.properties.CODE_ICAO + ".zip"
+				    zipFile = '"' + zipFile + '"'
+				console.log ("Zipfile : " + zipFile )
 				var pdfPath = ""
 				var pdfs = feature.properties.CHART_LIST.split(';')
 				for (var i = 0; i < pdfs.length; i++){
