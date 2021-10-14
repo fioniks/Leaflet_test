@@ -63,7 +63,7 @@
 					feature.properties.TXT_NAME_D + "</center></b>" ;
 		        if (feature.properties.LAST_PUBLI) {
 				console.log("debug_" + '1' )
-		        	popupContent += "</br><p class='customtext'><u>Siste publisering: </u>" + formatDate(feature.properties.LAST_PUBLI) + "</p></br>"
+		        	popupContent += "</br><p class='customtext'><u>Siste publisering</u>: " + formatDate(feature.properties.LAST_PUBLI) + "</p>"
 			}
 		        if (feature.properties.CHART_LIST) {
 				var arbopath = "./data/pdf/" + feature.properties.CODE_ICAO + "/"
