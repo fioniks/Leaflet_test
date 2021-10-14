@@ -50,6 +50,7 @@
 			var popupContent = "<b><center>" +
 					feature.properties.CODE_ICAO + " - " +
 					feature.properties.TXT_NAME_D + "</center></b>" ;
+		        popupContent += "</br><u>" + feature.properties.LAST_PUBLI + "</u>"
 		        if (feature.properties.CHART_LIST) {
 				var arbopath = "./data/pdf/" + feature.properties.CODE_ICAO + "/"
 				var pdfPath = ""
