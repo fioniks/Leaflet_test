@@ -31,7 +31,7 @@
   	year = datePart[0].substring(2), // get only two digits
   	month = datePart[1], day = datePart[2];
 
-  	return day+'/'+month+'/'+year;
+  	return day+'/'+month+'/' + "20" +year;
 }
 
   // initialize the map
@@ -59,7 +59,7 @@
 					feature.properties.CODE_ICAO + " - " +
 					feature.properties.TXT_NAME_D + "</center></b>" ;
 		        if (feature.properties.LAST_PUBLI) {
-		        	popupContent += "</br><u>Siste publisering: </u>" + formatDate(feature.properties.LAST_PUBLI) + "</br>"
+		        	popupContent += "</br><u><font color="#005CB9" face="courier" size="5">Siste publisering: </u>" + formatDate(feature.properties.LAST_PUBLI) + "</font></br>"
 			}
 		        if (feature.properties.CHART_LIST) {
 				var arbopath = "./data/pdf/" + feature.properties.CODE_ICAO + "/"
