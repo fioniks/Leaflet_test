@@ -17,6 +17,9 @@
 .custom-popup .leaflet-popup-content-wrapper a {
   color:rgba(255,255,255,0.5);
   }
+ .customtext {
+	color: #FFBB00
+	  }
 
   </style>
 </head>
@@ -59,7 +62,7 @@
 					feature.properties.CODE_ICAO + " - " +
 					feature.properties.TXT_NAME_D + "</center></b>" ;
 		        if (feature.properties.LAST_PUBLI) {
-		        	popupContent += "</br><u>Siste publisering: </u>" + formatDate(feature.properties.LAST_PUBLI) + "</br>"
+		        	popupContent += "</br><p class="customtext"><u>Siste publisering: </u>" + formatDate(feature.properties.LAST_PUBLI) + "</p></br>"
 			}
 		        if (feature.properties.CHART_LIST) {
 				var arbopath = "./data/pdf/" + feature.properties.CODE_ICAO + "/"
