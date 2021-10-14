@@ -25,6 +25,14 @@
   <div class='custom-popup' id="map"></div>
 
   <script>
+	  
+  function formatDate (input) {
+  	var datePart = input.match(/\d+/g),
+  	year = datePart[0].substring(2), // get only two digits
+  	month = datePart[1], day = datePart[2];
+
+  	return day+'/'+month+'/'+year;
+}
 
   // initialize the map
   var map = L.map('map').setView([63.45, 10.42], 5);
@@ -50,7 +58,7 @@
 			var popupContent = "<b><center>" +
 					feature.properties.CODE_ICAO + " - " +
 					feature.properties.TXT_NAME_D + "</center></b>" ;
-		        popupContent += "</br><u>Siste publisering: </u>" + feature.properties.LAST_PUBLI + "</br>"
+		        popupContent += "</br><u>Siste publisering: </u>" + formatDate(feature.properties.LAST_PUBLI) + "</br>"
 		        if (feature.properties.CHART_LIST) {
 				var arbopath = "./data/pdf/" + feature.properties.CODE_ICAO + "/"
 				var pdfPath = ""
