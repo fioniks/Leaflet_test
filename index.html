@@ -2,10 +2,13 @@
 <head>
   <title>AFIS opplæring Portal</title>
   <link rel="stylesheet" href="./assets/css/leaflet.css"/>
-  <link rel="stylesheet" href="./assets/css/Control.MiniMap.min.css"/>	
+  <link rel="stylesheet" href="./assets/css/Control.MiniMap.min.css"/>
+  <link rel="stylesheet" href="./assets/css/fontawesome.min.css"/>
+  <link rel="stylesheet" href="./assets/css/L.Control.Locate.min.css"/>	
   <script src="./assets/js/leaflet.js"></script>
   <script src="./assets/js/jquery-2.1.4.min.js"></script>
   <script src="./assets/js/Control.MiniMap.min.js"></script>
+  <script src="./assets/js/L.Control.Locate.min.js" charset="utf-8"></script>
   <style>
     #map{ height: 100% }
    .custom-popup .leaflet-popup-content-wrapper {
@@ -108,6 +111,8 @@
   var osmAttrib='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>';	  
   var osm2 = new L.TileLayer(osmUrl, {minZoom: 3, maxZoom: 14, attribution: osmAttrib });
   var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true ,position: 'bottomleft' , width : 200, height:200 }).addTo(map);
+	  
+   L.control.locate().addTo(map);
 
   </script>
 </body>
