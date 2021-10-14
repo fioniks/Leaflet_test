@@ -62,6 +62,7 @@
 					feature.properties.CODE_ICAO + " - " +
 					feature.properties.TXT_NAME_D + "</center></b>" ;
 		        if (feature.properties.LAST_PUBLI) {
+				console.log("debug_" + '1' )
 		        	popupContent += "</br><p class='customtext'><u>Siste publisering: </u>" + formatDate(feature.properties.LAST_PUBLI) + "</p></br>"
 			}
 		        if (feature.properties.CHART_LIST) {
