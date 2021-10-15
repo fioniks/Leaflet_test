@@ -19,6 +19,14 @@
   		width: 200px;
   		height: 100px;
 	}
+     #AiracInfoContainer {
+  		position: absolute;
+  		z-index: 101;
+  		bottom: 10px;
+  		left: 15vw;
+  		width: 200px;
+  		height: 100px;
+	}
    .custom-popup .leaflet-popup-content-wrapper {
   background:#2c3e50;
   color:#fff;
@@ -38,6 +46,7 @@
 
   <div class='custom-popup' id="map"></div>
   <div id="logoContainer"><p><img src="./assets/css/images/Avinor-lilla.png" width="200" height="100"/></p></div>
+  <div id="AiracInfoContainer"><p>Last Update : Airac 07 OCT 2021 </p></div>
 
   <script>
 	  
@@ -61,7 +70,9 @@
     }).addTo(map);
   var mapControlsContainer = document.getElementsByClassName("leaflet-control")[0];
   var logoContainer = document.getElementById("logoContainer");
+  var AiracInfoContainer = document.getElementById("AiracInfoContainer");
   mapControlsContainer.appendChild(logoContainer);
+  mapControlsContainer.appendChild(AiracInfoContainer);
 	
 	var  geojsonMarkerOptions = {
         'radius':10,
