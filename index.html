@@ -5,12 +5,10 @@
   <link rel="stylesheet" href="./assets/css/Control.MiniMap.min.css"/>
   <link rel="stylesheet" href="./assets/css/all.min.css"/>
   <link rel="stylesheet" href="./assets/css/L.Control.Locate.min.css"/>
-  <link rel="stylesheet" href="./assets/css/leaflet-control-credits.css>
   <script src="./assets/js/leaflet.js"></script>
   <script src="./assets/js/jquery-2.1.4.min.js"></script>
   <script src="./assets/js/Control.MiniMap.min.js"></script>
-  <script src="./assets/js/L.Control.Locate.min.js" charset="utf-8"></script>
-  <script src="./assets/js/leaflet-control-credits.js"></script>							   
+  <script src="./assets/js/L.Control.Locate.min.js" charset="utf-8"></script>						   
   <style>
     #map{ height: 100% }
    .custom-popup .leaflet-popup-content-wrapper {
@@ -119,11 +117,7 @@
   var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true ,position: 'bottomleft' , width : 200, height:200 }).addTo(map);
 	  
    L.control.locate({icon :'fas fa-map-pin fas fa-2x'}).addTo(map);
-   var credctrl = new L.controlCredits({
-    image: "./assets/css/images/Avinor_lilla.png",
-    link: "http://www.avinor.no/",
-    text: "Airac Dato :<br/> 04/11/2021"
-}).addTo(map);
+   
 
   </script>
 </body>
